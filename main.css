@@ -1,0 +1,81 @@
+body {
+    background-color:blanchedalmond;
+}
+main {
+    max-width: 100vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%
+}
+header {
+    padding: 10px;
+    text-align: center;
+}
+header h1 {
+    font-size: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+p {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.choice {
+    background-color: transparent;
+    border: none;
+}
+.object-container {
+    display:flex;
+    justify-content: space-between;
+}
+.no-display {
+    opacity: 0;
+}
+.display {
+    opacity: 100;
+}
+.game-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.animate-in.animate-out{
+    animation-delay: 900ms;
+    animation: fadeIn 200ms ease-in-out forwards;
+}
+
+.animate-out {
+    animation: fadeOut 500ms ease-in-out forwards
+}
+
+.restart {
+    background-color: cornsilk;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+    border-color: black;
+}
+
+.restart:hover {
+    background-color:bisque;
+}
