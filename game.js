@@ -21,6 +21,7 @@ game = () => {
             }, 500)
         })
         setTimeout(() => makeSelection(this.classList[1]), 900);
+        setTimeout(() => document.querySelector('.restart').classList.remove('hidden'), 1000);
     }));
 
     const restart = document.querySelector('.restart');

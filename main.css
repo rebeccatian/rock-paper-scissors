@@ -20,6 +20,36 @@ p {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
 }
+
+@media screen and (max-width: 1400px) {
+    header h1 {
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 500;
+    }
+    p {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main {
+        max-width: 100vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2%
+    }
+    img {
+        width: 80%;
+    }
+    .object-container {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .object-container {
+        height: 150px;
+    }
+}
 .choice {
     background-color: transparent;
     border: none;
@@ -69,13 +99,23 @@ p {
 }
 
 .restart {
-    background-color: cornsilk;
-    border-radius: 10px;
+    background-color: rgb(255, 237, 216);
+    border-radius: 3px;
     width: fit-content;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-color: black;
+    border-width: 1px;
+    box-shadow: none;
+    width: 100px;
 }
 
 .restart:hover {
-    background-color:bisque;
+    background-color: rgb(255, 144, 100);
+}
+
+.hidden {
+    display: none;
 }
