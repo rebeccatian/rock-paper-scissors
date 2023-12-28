@@ -35,46 +35,26 @@ game = () => {
         })
     })
 
+    const selections = {
+        'rock': {
+            'paper': 'You lose.',
+            'scissors': 'You win!',
+            'rock': 'You tied.'
+        },
+        'paper': {
+            'paper': 'You tied.',
+            'scissors': 'You lose.',
+            'rock': 'You win!'
+        },
+        'scissors': {
+            'paper': 'You win!',
+            'scissors': 'You tied.',
+            'rock': 'You lose.'
+        },
+    }
+
     const makeSelection = choice => {
-        if (choice === 'rock') {
-            switch(computerChoice.classList[1]) {
-                case 'paper': {
-                    result.innerHTML = "You lose.";
-                    break;
-                }
-                case 'scissors': {
-                    result.innerHTML = "You win!"
-                    break;
-                }
-                default: result.innerHTML = "You tied."
-            }
-        }
-        if (choice === 'scissors') {
-            switch(computerChoice.classList[1]) {
-                case 'rock': {
-                    result.innerHTML = "You lose.";
-                    break;
-                }
-                case 'paper': {
-                    result.innerHTML = "You win!"
-                    break;
-                }
-                default: result.innerHTML = "You tied."
-            }
-        }
-        if (choice === 'paper') {
-            switch(computerChoice.classList[1]) {
-                case 'scissors': {
-                    result.innerHTML = "You lose.";
-                    break;
-                }
-                case 'rock': {
-                    result.innerHTML = "You win!";
-                    break;
-                }
-                default: result.innerHTML = "You tied."
-            }
-        }
+        result.innerHTML = selections[choice][computerChoice.classList[1]];
     }
 };
 
